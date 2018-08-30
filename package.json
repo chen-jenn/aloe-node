@@ -1,0 +1,11 @@
+{
+  "name": "aloe-node",
+  "version": "0.0.0",
+  "description": "Same idea for that watering app, but this time your are getting real world feedback from your plants. They be talking to YOU",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jen",
+  "license": "ISC"
+}
