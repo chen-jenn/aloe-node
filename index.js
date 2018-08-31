@@ -5,10 +5,10 @@ const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 
 // ROUTES
-// const welcome = require("./routes/welcome");
+const welcome = require("./routes/welcome");
 const app = express();
 app.set("view engine", "ejs");
-s
+
 // MIDDLEWARE
 // Http Request Logger
 app.use(morgan("dev"));
