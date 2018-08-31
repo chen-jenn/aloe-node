@@ -7,5 +7,5 @@ Created using nodejs and arduino
 Original project found here: https://github.com/chen-jenn/aloe
 
 ### To Do:
-install node modules
-set up simple view page 
+* install node modules
+* set up simple view page 
