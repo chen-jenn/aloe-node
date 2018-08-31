@@ -1,6 +1,6 @@
 const path = require("path")
 const express = require("express");
-const morgan = require("morgan");
+const morgan = require("morgan"); //http request logger
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 
@@ -10,7 +10,6 @@ const app = express();
 app.set("view engine", "ejs");
 
 // MIDDLEWARE
-// Http Request Logger
 app.use(morgan("dev"));
 
 // Static Assets
