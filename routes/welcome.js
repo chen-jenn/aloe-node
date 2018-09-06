@@ -6,7 +6,7 @@ router.get("/home", (req, res) => {
 });
 
 router.get("/", (req, res) => {
-  res.render("index");
+  res.render("welcome"); 
 })
 
 

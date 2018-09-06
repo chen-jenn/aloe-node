@@ -3,11 +3,18 @@ const express = require("express");
 const morgan = require("morgan"); //http request logger
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
+const five = require("johnny-five");
+// const board = new five.Board();
+//
+// board.on('ready', function() {
+//   let led = new five.Led(13); // pin 13
+//   led.blink(300); // 500ms interval
+// });
 
 // ROUTES
 const welcome = require("./routes/welcome");
 const app = express();
-app.set("view engine", "ejs");
+app.set("view engine", "ejs"); //Tells the app where to find your view pages
 
 // MIDDLEWARE
 app.use(morgan("dev"));
@@ -22,21 +29,11 @@ app.use(cookieParser());
 // Body Parser
 app.use(bodyParser.urlencoded({extended: true}));
 
-// Custom Middleware
-app.use((request, response, next) => {
-  const username = request.cookies.username;
-  console.log(request.cookies);
-
-  response.locals.username = null;
-
-  if (username) {
-    response.locals.username = username;
-  }
-  next();
-});
-
+// Adding routes to your app
 app.use("/", welcome);
 
+
+//Server setup
 const DOMAIN = "localhost";
 const PORT = 3000;
 
