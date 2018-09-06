@@ -4,7 +4,7 @@ module.exports = {
     client: "pg",
     connection: {
       database: "aloe", //db name
-      user: "jennifer",
+      user: "jennifer", //in the future these should really be environment variables
       password: "hi"
     },
     migrations: {
@@ -15,3 +15,8 @@ module.exports = {
     }
   }
 }
+
+// Notes to navigate psql because i forget
+// \l listing all the dbs on your system
+// \c aloe - to go into the aloe db
+// \dt - to list all the database relations, all the tables that are relevant to that db
